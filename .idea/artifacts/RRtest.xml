@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="RRtest">
+    <output-path>$PROJECT_DIR$/out/artifacts/RRtest</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="sample.Main" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="JavaFXApp.jar">
+        <element id="module-output" name="RecordsReporter_v3" />
+      </element>
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/log4j-1.2.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/javaee-api-5.0-2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
