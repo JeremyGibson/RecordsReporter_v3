@@ -12,7 +12,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import LoginMod.classes.Login;
 import LoginMod.classes.User;
+import libs.Database;
 
+import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -27,14 +29,19 @@ public class ControlLogin implements Initializable {
     public Login login;
     public User user;
     private Stage dialogStage;
-
+    Database db;
     Boolean validated_user;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        login = new Login();
+
+    }
+
+    public void init() {
+        login = new Login(db);
         user = new User();
         validated_user = Boolean.FALSE;
+        email.setText(login.getEmailFromPrefs());
     }
 
     public TextField getEmail() {
@@ -61,6 +68,10 @@ public class ControlLogin implements Initializable {
         this.dialogStage = dialogStage;
     }
 
+    public void setDatabase(Database db) {
+        this.db = db;
+    }
+
     public void setUser(User u) {
         this.user = u;
         this.email.setText(user.getEmail());
@@ -76,6 +87,14 @@ public class ControlLogin implements Initializable {
                 validated_user = Boolean.FALSE;
             }
             dialogStage.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void log_out() {
+        try {
+            login.log_them_out(user.getUid());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -97,7 +116,7 @@ public class ControlLogin implements Initializable {
             //Set the controller
             final ControlNewUser nuc = loader.getController();
             nuc.setOwningStage(newUserDialog);
-
+            nuc.setDatabase(db);
             newUserDialog.showAndWait();
             user = nuc.getUser();
             this.email.setText(user.getEmail());

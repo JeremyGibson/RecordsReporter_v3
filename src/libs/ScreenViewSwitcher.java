@@ -19,6 +19,7 @@ public class ScreenViewSwitcher extends StackPane {
     private HashMap<String, FXMLLoader> loaders = new HashMap<String, FXMLLoader>();
     private MainViewController mvc;
     private User user;
+    private Database db;
 
     public ScreenViewSwitcher() {
         super();
@@ -40,6 +41,7 @@ public class ScreenViewSwitcher extends StackPane {
             ControlledScreen myScreenController = ((ControlledScreen) myLoader.getController());
             myScreenController.setScreenParent(this);
             myScreenController.setUser(user);
+            myScreenController.setDatabase(db);
             myScreenController.init();
             setUserData(myScreenController);
             addScreen(name, loadScreen);
@@ -64,6 +66,10 @@ public class ScreenViewSwitcher extends StackPane {
 
     public void registerUser(User u) {
         user = u;
+    }
+
+    public void registerDatabase(Database db) {
+        this.db = db;
     }
 
     public void activatePane(String view) {

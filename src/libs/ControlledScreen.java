@@ -9,4 +9,5 @@ public interface ControlledScreen {
     public void setScreenParent(ScreenViewSwitcher screenPage);
     public void setUser(User u);
     public void init();
+    public void setDatabase(Database db);
 }

@@ -25,7 +25,7 @@ public class UserList {
     }
 
     public ObservableList<String> getList(int type) {
-        Database db = new Database("mssql");
+        Database db = new Database();
         ObservableList<String> ol = FXCollections.observableArrayList();
         PreparedStatement ps;
         try {

@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import libs.ControlledScreen;
+import libs.Database;
 import libs.ScreenViewSwitcher;
 
 import java.net.URL;
@@ -23,6 +24,7 @@ import java.util.ResourceBundle;
 public class MinutesController implements Initializable, ControlledScreen {
     ScreenViewSwitcher myController;
     User user;
+    Database db;
 
     //<editor-fold desc="@FMXLs">
     @FXML private TableColumn<Minute, Number> mid_col = new TableColumn<>();
@@ -49,14 +51,15 @@ public class MinutesController implements Initializable, ControlledScreen {
 
 
 
-    private static ObservableList<Minute> getList(int uid, int type) {
+    private ObservableList<Minute> getList(int uid, int type) {
         MinutesTableModel mtm = new MinutesTableModel();
         ObservableList<Minute> minutes = null;
         try {
-            minutes = mtm.getModel(uid, type);
+            minutes = mtm.getModel(uid, type, db);
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        db.closeConnection();
         return minutes;
     }
 
@@ -73,6 +76,11 @@ public class MinutesController implements Initializable, ControlledScreen {
     @Override
     public void setUser(User u) {
         user = u;
+    }
+
+    @Override
+    public void setDatabase(Database db) {
+        this.db = db;
     }
 
     @Override

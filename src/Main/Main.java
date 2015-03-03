@@ -1,6 +1,7 @@
 package Main;
 
 import ContactMod.ContactsController;
+import LoginMod.classes.Login;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,9 +10,11 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import LoginMod.ControlLogin;
 import LoginMod.classes.User;
+import libs.Database;
 import org.controlsfx.dialog.Dialogs;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class Main extends Application {
     ControlLogin controlLogin;
@@ -20,17 +23,16 @@ public class Main extends Application {
     private User user;
     private static final int CONTACTS = 1;
     private int current_view = 1;
+    Database db;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        System.setProperty("db_path", "H:\\Development\\Intellij\\RecordsReporter_v3\\");
+        System.setProperty("db_name", "rrv3.db3");
+        db = new Database();
         mainStage = primaryStage;
         primaryStage.setTitle("Records Reporter V3");
-        //showLoginView();
-        user = new User();
-        user.setFirst_name("Jeremy");
-        user.setLast_name("Gibson");
-        user.setUid(1);
-        user.setRole(0);
+        showLoginView();
         System.setProperty("uid", String.format("%s", user.getUid()));
         showMainView();
 
@@ -38,7 +40,7 @@ public class Main extends Application {
 
     public void showLoginView() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("LoginMod/login.fxml"));
+        loader.setLocation(getClass().getResource("../LoginMod/login.fxml"));
         AnchorPane page = (AnchorPane) loader.load();
         Stage dialogStage = new Stage();
         dialogStage.setTitle("Login");
@@ -49,6 +51,8 @@ public class Main extends Application {
         dialogStage.setScene(scene);
 
         controlLogin = loader.getController();
+        controlLogin.setDatabase(db);
+        controlLogin.init();
         if(user != null)
             controlLogin.setUser(user);
         controlLogin.setDialogStage(dialogStage);
@@ -72,12 +76,22 @@ public class Main extends Application {
         mainStage.setScene(new Scene((AnchorPane) loader.load()));
         MainViewController mvc = loader.<MainViewController>getController();
         mvc.setUser(user);
+        mvc.setDatabase(db);
         mvc.init_screens();
         mainStage.show();
     }
 
     public User getUser() {
         return user;
+    }
+
+    @Override
+    public void stop() {
+        try {
+            new Login(db).log_them_out(user.getUid());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {

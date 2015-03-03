@@ -8,6 +8,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import libs.ControlledScreen;
+import libs.Database;
 import libs.ScreenViewSwitcher;
 import LoginMod.classes.User;
 
@@ -25,6 +26,7 @@ public class MainViewController implements Initializable {
     @FXML private MenuItem mi_workshops;
     @FXML private MenuItem mi_minutes;
     @FXML private MenuItem mi_schedules;
+    @FXML private MenuItem mi_pref_login;
 
     public static final String CONTACTS = "Contacts";
     public static final String SCHEDULES = "Schedules";
@@ -39,6 +41,7 @@ public class MainViewController implements Initializable {
 
     private Stage ownerStage;
     private User user;
+    private Database db;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -49,6 +52,7 @@ public class MainViewController implements Initializable {
         svs = new ScreenViewSwitcher();
         svs.registerRoot(this);
         svs.registerUser(user);
+        svs.registerDatabase(db);
         svs.loadScreen(CONTACTS, "../ContactMod/contacts.fxml");
         svs.loadScreen(MINUTES, "../MinutesMod/minutes.fxml");
         //svs.loadScreen(SCHEDULES, "../scheduleMod/schedule_table.fxml");
@@ -89,12 +93,19 @@ public class MainViewController implements Initializable {
         switch_active_pane(MINUTES);
     }
 
+    @FXML private void handle_admin_login() {
+
+    }
+
     public Stage getParentStage() {
         return ownerStage;
     }
 
     public void setUser(User u) {
         user = u;
+    }
+    public void setDatabase(Database db) {
+        this.db = db;
     }
 
 

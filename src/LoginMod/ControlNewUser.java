@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import LoginMod.classes.Login;
 import LoginMod.classes.User;
+import libs.Database;
 
 import java.sql.SQLException;
 
@@ -35,6 +36,8 @@ public class ControlNewUser {
     //User
     private User user;
 
+    private Database db;
+
     @FXML
     private void initialize() {
 
@@ -47,7 +50,7 @@ public class ControlNewUser {
     @FXML
     private void handleAdd() {
         user = new User();
-        Login lgn = new Login();
+        Login lgn = new Login(db);
 
         user.setFirst_name(nu_first_name.getText());
         user.setLast_name(nu_last_name.getText());
@@ -65,6 +68,10 @@ public class ControlNewUser {
 
     public User getUser() {
         return user;
+    }
+
+    public void setDatabase(Database db) {
+        this.db = db;
     }
 
     @FXML

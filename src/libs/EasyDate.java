@@ -96,6 +96,10 @@ public class EasyDate {
         return this_month_cal.getTimeInMillis();
     }
 
+    public Long getSqlDateAsLong() {
+        return this.util_date.getTime();
+    }
+
     public void setDates(String date) throws ParseException {
         this.string_date = date;
         if(string_date.length() > 10) {

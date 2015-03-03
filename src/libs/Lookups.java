@@ -61,8 +61,7 @@ public class Lookups {
         contact_class_lookup.put("Private", 2);
     }
 
-    public static final ObservableList<String> contacts_auto_fill_text(String column_name, int uid) throws SQLException {
-        Database db = new Database("mssql");
+    public static final ObservableList<String> contacts_auto_fill_text(String column_name, int uid, Database db) throws SQLException {
         String sql = String.format("SELECT %s FROM contacts where uid=%d", column_name, uid);
         CachedRowSet rs = db.read(sql);
         ObservableList<String> list = FXCollections.observableArrayList();

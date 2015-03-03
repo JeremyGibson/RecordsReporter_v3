@@ -13,6 +13,7 @@ import java.sql.SQLException;
  * Created by jgibson on 2/11/2015.
  */
 public class ContactsTableModel {
+
     private ObservableList<Contact> contacts_list = FXCollections.observableArrayList();
     private static final String GET_USER_CONTACTS = "Select users.f_name, users.l_name, contacts.* " +
             "from users, contacts where contacts.uid=users.uid " +
@@ -27,9 +28,9 @@ public class ContactsTableModel {
     private Database db;
     private int uid;
 
-    public ObservableList<Contact> getModel(int uid, int get_type) throws SQLException {
+    public ObservableList<Contact> getModel(int uid, int get_type, Database db) throws SQLException {
+        this.db = db;
         this.uid = uid;
-        db = new Database("mssql");
         ResultSet rs;
         switch (get_type) {
             case USER_CONTACTS:
@@ -53,7 +54,7 @@ public class ContactsTableModel {
                     rs.getInt("uid"),
                     String.format("%s %s", rs.getString("f_name"), rs.getString("l_name")),
                     rs.getDate("contact_date").toLocalDate(),
-                    rs.getDate("insert_date").toLocalDate(),
+                    rs.getDate("date_added").toLocalDate(),
                     rs.getInt("agency_type"),
                     rs.getInt("contact_type"),
                     rs.getString("contact_agency"),
@@ -62,9 +63,11 @@ public class ContactsTableModel {
                     rs.getString("contact_description"),
                     rs.getInt("contact_class"),
                     rs.getInt("num_contacts"),
-                    rs.getInt("additional_analysts")
+                    rs.getInt("additional_analysts"),
+                    rs.getDate("date_modified").toLocalDate()
             ));
         }
         return  contacts_list;
     }
+
 }

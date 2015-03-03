@@ -46,7 +46,7 @@ public class AddContactsController implements ControlledScreen {
 
     @FXML
     private void initialize() {
-        db = new Database("MSSQL");
+        db = new Database();
         editing = false;
     }
 
@@ -61,18 +61,19 @@ public class AddContactsController implements ControlledScreen {
         tf_num_contacts.setText("1");
         try {
             TextFields.bindAutoCompletion(
-                    tf_contact_name, (Collection) Lookups.contacts_auto_fill_text("contact_person", user.getUid())
+                    tf_contact_name, (Collection) Lookups.contacts_auto_fill_text("contact_person", user.getUid(), db)
             );
             TextFields.bindAutoCompletion(
-                    tf_agency, (Collection) Lookups.contacts_auto_fill_text("contact_agency", user.getUid())
+                    tf_agency, (Collection) Lookups.contacts_auto_fill_text("contact_agency", user.getUid(), db)
             );
             TextFields.bindAutoCompletion(
-                    tf_office, (Collection) Lookups.contacts_auto_fill_text("contact_agency_office", user.getUid())
+                    tf_office, (Collection) Lookups.contacts_auto_fill_text("contact_agency_office", user.getUid(), db)
             );
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        db.closeConnection();
         editing = false;
     }
 
@@ -84,18 +85,19 @@ public class AddContactsController implements ControlledScreen {
         combob_contact_class.setItems(Lookups.contact_class);
         try {
             TextFields.bindAutoCompletion(
-                    tf_contact_name, (Collection) Lookups.contacts_auto_fill_text("contact_person", user.getUid())
+                    tf_contact_name, (Collection) Lookups.contacts_auto_fill_text("contact_person", user.getUid(), db)
             );
             TextFields.bindAutoCompletion(
-                    tf_agency, (Collection) Lookups.contacts_auto_fill_text("contact_agency", user.getUid())
+                    tf_agency, (Collection) Lookups.contacts_auto_fill_text("contact_agency", user.getUid(), db)
             );
             TextFields.bindAutoCompletion(
-                    tf_office, (Collection) Lookups.contacts_auto_fill_text("contact_agency_office", user.getUid())
+                    tf_office, (Collection) Lookups.contacts_auto_fill_text("contact_agency_office", user.getUid(), db)
             );
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        db.closeConnection();
         getContactToEdit();
     }
 
@@ -135,6 +137,7 @@ public class AddContactsController implements ControlledScreen {
             pre_edit_additional = FXCollections.observableArrayList(lv_additional_analysts.getSelectionModel().getSelectedItems());
             FXCollections.copy(pre_edit_additional, lv_additional_analysts.getSelectionModel().getSelectedItems());
         }
+        db.closeConnection();
         btn_add_contact.setText("Edit Contact");
     }
 
@@ -151,31 +154,33 @@ public class AddContactsController implements ControlledScreen {
     private void addContact() throws SQLException {
         int cid;
         PreparedStatement ps = db.getConnection().prepareStatement("INSERT INTO contacts " +
-                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
+                "VALUES (null,?,?,?,?,?,?,?,?,?,?,?,?,?)", Statement.RETURN_GENERATED_KEYS);
         PreparedStatement add_analysts = db.getConnection().prepareStatement("INSERT INTO additional_analysts " +
                 "VALUES (?,?)");
 
         //<editor-fold desc="Setup and Execute PreparedStatement">
         ps.setInt(1, user.getUid());
         try {
-            ps.setDate(2, new EasyDate(contact_date.getValue()).getSql_date());
+            ps.setLong(2, new EasyDate(contact_date.getValue()).getSqlDateAsLong());
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        ps.setDate(3, new EasyDate().getSql_date());
-        ps.setInt(4, Lookups.slu_lookup.get(combob_slu.getValue().toString()));
-        ps.setInt(5, Lookups.type_contact_lookup.get(combob_type_contact.getValue().toString()));
-        ps.setString(6, tf_agency.getText());
-        ps.setString(7, tf_office.getText());
-        ps.setString(8, tf_contact_name.getText());
-        ps.setString(9, description.getHtmlText());
-        ps.setInt(10, Lookups.contact_class_lookup.get(combob_contact_class.getValue().toString()));
-        ps.setInt(11, Integer.parseInt(tf_num_contacts.getText()));
+
+        ps.setInt(3, Lookups.slu_lookup.get(combob_slu.getValue().toString()));
+        ps.setInt(4, Lookups.type_contact_lookup.get(combob_type_contact.getValue().toString()));
+        ps.setString(5, tf_agency.getText());
+        ps.setString(6, tf_office.getText());
+        ps.setString(7, tf_contact_name.getText());
+        ps.setString(8, description.getHtmlText());
+        ps.setInt(9, Lookups.contact_class_lookup.get(combob_contact_class.getValue().toString()));
+        ps.setInt(10, Integer.parseInt(tf_num_contacts.getText()));
         if(lv_additional_analysts.isDisabled()) {
-            ps.setInt(12, 1);
+            ps.setInt(11, 1);
         } else {
-            ps.setInt(12, 0);
+            ps.setInt(11, 0);
         }
+        ps.setLong(12, new EasyDate().getSqlDateAsLong());
+        ps.setLong(13, new EasyDate().getDateAsLong());
 
         int affectedRows = ps.executeUpdate();
         if(affectedRows == 0) {
@@ -188,7 +193,9 @@ public class AddContactsController implements ControlledScreen {
             } else {
                 throw new SQLException("Creating user failed, no ID obtained.");
             }
+            generatedKeys.close();
         }
+        ps.close();
         //</editor-fold>
 
         //<editor-fold desc="Check for Additional Analysts">
@@ -200,6 +207,7 @@ public class AddContactsController implements ControlledScreen {
                 createAA(add_analysts, cid, s);
             }
         }
+        add_analysts.close();
         //</editor-fold>
 
         //<editor-fold desc="Add the Contact to TableView">
@@ -216,7 +224,8 @@ public class AddContactsController implements ControlledScreen {
                 description.getHtmlText(),
                 Lookups.contact_class_lookup.get(combob_contact_class.getValue().toString()),
                 Integer.parseInt(tf_num_contacts.getText()),
-                xtra_analysts);
+                xtra_analysts,
+                LocalDate.now());
         tblview.getItems().add(0,this_contact);
         //</editor-fold>
 
@@ -280,6 +289,7 @@ public class AddContactsController implements ControlledScreen {
             ps.setInt(10, 0);
             ps.setInt(11, current_cid);
             ps.executeUpdate();
+            ps.close();
             return;
         }
 
@@ -300,9 +310,10 @@ public class AddContactsController implements ControlledScreen {
 
         ps.setInt(11, current_cid);
         ps.executeUpdate();
+        ps.close();
+        aa.close();
+        add_analysts.close();
     //</editor-fold>
-
-
     }
 
     private void createAA(PreparedStatement ps, int cid, String analyst) throws SQLException {
@@ -340,6 +351,11 @@ public class AddContactsController implements ControlledScreen {
     @Override
     public void setUser(User u) {
         user = u;
+    }
+
+    @Override
+    public void setDatabase(Database db) {
+        this.db = db;
     }
 
     public void registerTable(TableView<Contact> t) {

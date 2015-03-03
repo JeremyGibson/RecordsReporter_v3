@@ -12,7 +12,8 @@ public class Contact {
     private final IntegerProperty uid;
     private final StringProperty user_name;
     private final ObjectProperty<LocalDate> contact_date;
-    private final ObjectProperty<LocalDate> insert_date;
+    private final ObjectProperty<LocalDate> date_added;
+    private final ObjectProperty<LocalDate> date_modified;
     private final IntegerProperty agency_type;
     private final IntegerProperty contact_type;
     private final StringProperty contact_agency;
@@ -27,7 +28,7 @@ public class Contact {
     public Contact(int cid, int uid,
                    String user_name,
                    LocalDate contact_date,
-                   LocalDate insert_date,
+                   LocalDate date_added,
                    int agency_type,
                    int contact_type,
                    String contact_agency,
@@ -36,12 +37,14 @@ public class Contact {
                    String contact_description,
                    int contact_class,
                    int num_contacts,
-                   int additional_analysts) {
+                   int additional_analysts,
+                   LocalDate date_modified) {
         this.cid = new SimpleIntegerProperty(cid);
         this.uid = new SimpleIntegerProperty(uid);
         this.user_name = new SimpleStringProperty(user_name);
         this.contact_date = new SimpleObjectProperty<LocalDate>(contact_date);
-        this.insert_date = new SimpleObjectProperty<LocalDate>(insert_date);
+        this.date_added = new SimpleObjectProperty<LocalDate>(date_added);
+        this.date_modified = new SimpleObjectProperty<LocalDate>(date_modified);
         this.agency_type =  new SimpleIntegerProperty(agency_type);
         this.contact_type = new SimpleIntegerProperty(contact_type);
         this.contact_agency = new SimpleStringProperty(contact_agency);
@@ -86,12 +89,12 @@ public class Contact {
         return contact_date;
     }
 
-    public LocalDate getInsert_date() {
-        return insert_date.get();
+    public LocalDate getDate_added() {
+        return date_added.get();
     }
 
-    public ObjectProperty<LocalDate> insert_dateProperty() {
-        return insert_date;
+    public ObjectProperty<LocalDate> date_addedProperty() {
+        return date_added;
     }
 
     public int getAgency_type() {
@@ -165,6 +168,15 @@ public class Contact {
     public IntegerProperty additional_analystsProperty() {
         return additional_analysts;
     }
+
+    public LocalDate getDate_modified() {
+        return date_modified.get();
+    }
+
+    public ObjectProperty<LocalDate> date_modifiedProperty() {
+        return date_modified;
+    }
+
     //</editor-fold>
 
     //<editor-fold desc="Setters">
@@ -184,8 +196,8 @@ public class Contact {
         this.contact_date.set(contact_date);
     }
 
-    public void setInsert_date(LocalDate insert_date) {
-        this.insert_date.set(insert_date);
+    public void setDate_added(LocalDate date_added) {
+        this.date_added.set(date_added);
     }
 
     public void setAgency_type(int agency_type) {
@@ -223,5 +235,10 @@ public class Contact {
     public void setAdditional_analysts(int additional_analysts) {
         this.additional_analysts.set(additional_analysts);
     }
+
+    public void setDate_modified(LocalDate date_modified) {
+        this.date_modified.set(date_modified);
+    }
+
     //</editor-fold>
 }

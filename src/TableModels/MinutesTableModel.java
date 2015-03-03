@@ -28,9 +28,9 @@ public class MinutesTableModel {
     private Database db;
     private int uid;
 
-    public ObservableList<Minute> getModel(int uid, int get_type) throws SQLException {
+    public ObservableList<Minute> getModel(int uid, int get_type, Database db) throws SQLException {
         this.uid = uid;
-        db = new Database("mssql");
+        this.db = db;
         ResultSet rs;
         switch (get_type) {
             case USER_MINUTES:

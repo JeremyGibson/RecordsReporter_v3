@@ -3,6 +3,7 @@ package WorkshopsMod;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import libs.ControlledScreen;
+import libs.Database;
 import libs.ScreenViewSwitcher;
 import LoginMod.classes.User;
 
@@ -14,7 +15,7 @@ import java.util.ResourceBundle;
  */
 public class WorkshopsTableController implements Initializable, ControlledScreen {
     private User user;
-
+    private Database db;
     @Override
     public void setScreenParent(ScreenViewSwitcher screenPage) {
 
@@ -37,5 +38,10 @@ public class WorkshopsTableController implements Initializable, ControlledScreen
     @Override
     public void setUser(User u) {
         user = u;
+    }
+
+    @Override
+    public void setDatabase(Database db) {
+        this.db = db;
     }
 }

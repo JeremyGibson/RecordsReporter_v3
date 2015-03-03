@@ -2,6 +2,7 @@ package libs;
 
 import com.sun.rowset.CachedRowSetImpl;
 import org.apache.log4j.Logger;
+import org.sqlite.SQLiteConfig;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -43,8 +44,8 @@ public class Database implements CRUD {
 
     public Database() {
         //Default to sqlite
-        database_path = System.getProperty("db.location");
-        database_name = System.getProperty("db.name");
+        database_path = System.getProperty("db_path");
+        database_name = System.getProperty("db_name");
         connection_string = String.format("jdbc:sqlite:%s%s",
                 this.database_path,
                 this.database_name);
@@ -55,7 +56,7 @@ public class Database implements CRUD {
         //Default to sqlite
         database_name = name;
         database_path = path;
-        connection_string = String.format("jdbc:sqlite:%s%s",
+        connection_string = String.format("jdbc:sqlite:%s%s;",
                 this.database_path,
                 this.database_name);
         createConnection(SQLITE);
@@ -117,12 +118,18 @@ public class Database implements CRUD {
     }
 
     public Connection getConnection() {
+        try {
+            if(connection.isClosed()) {
+                createConnection(SQLITE);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return connection;
     }
 
     public void closeConnection() {
         try {
-            statement.close();
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -132,7 +139,9 @@ public class Database implements CRUD {
     private void createConnection(int type) {
         try {
             Class.forName(name_space);
-            connection = DriverManager.getConnection(connection_string);
+            SQLiteConfig config = new SQLiteConfig();
+            config.enforceForeignKeys(true);
+            connection = DriverManager.getConnection(connection_string, config.toProperties());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
             log.debug(e.getMessage());
@@ -145,14 +154,14 @@ public class Database implements CRUD {
     private int usualConnection(String sql, int type) {
         int success = 0;
         try {
-            if(!connection.isValid(5))
-                createConnection(CURRENT_DB_TYPE);
+            //if(!connection.isValid(5))
+            //createConnection(CURRENT_DB_TYPE);
             statement = connection.createStatement();
             statement.setQueryTimeout(5);
 
             switch(type) {
                 case NO_RETURN_RESULT:
-                    success = statement.execute(sql, Statement.RETURN_GENERATED_KEYS) ? 1 : 0;
+                    success = statement.execute(sql) ? 1 : 0;
                     keys = new CachedRowSetImpl();
                     resultSet = statement.getGeneratedKeys();
                     keys.populate(resultSet);
@@ -161,18 +170,13 @@ public class Database implements CRUD {
                     resultSet.close();
                     break;
                 case RETURN_RESULT_SET:
-                    statement.execute(sql, Statement.RETURN_GENERATED_KEYS);
+                    statement.execute(sql);
                     resultSet = statement.getResultSet();
                     cachedRowSet = new CachedRowSetImpl();
                     cachedRowSet.populate(resultSet);
-                    /*
-                    keys.populate(statement.getGeneratedKeys());
-                    statement.close();
-                    resultSet.close();
-                    */
                     break;
                 case UPDATE:
-                    success = statement.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+                    success = statement.executeUpdate(sql);
                     statement.close();
                     break;
             }

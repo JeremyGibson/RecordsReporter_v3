@@ -32,8 +32,9 @@ import java.util.ResourceBundle;
  * Created by jgibson on 2/11/2015.
  */
 public class ContactsController implements Initializable, ControlledScreen {
-    ScreenViewSwitcher myController;
-    User user;
+    private ScreenViewSwitcher myController;
+    private User user;
+    private Database db;
 
 
     @FXML private TableColumn<Contact, Number> cidCol = new TableColumn<>();
@@ -47,6 +48,7 @@ public class ContactsController implements Initializable, ControlledScreen {
     @FXML private Button delete_contact;
 
     @FXML private TableView<Contact> contacts_table = new TableView<Contact>();
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -85,14 +87,15 @@ public class ContactsController implements Initializable, ControlledScreen {
     }
 
 
-    public static ObservableList<Contact> getList(int uid, int type) {
+    public ObservableList<Contact> getList(int uid, int type) {
         ContactsTableModel ctm = new ContactsTableModel();
         ObservableList<Contact> contacts = null;
         try {
-            contacts = ctm.getModel(uid, type);
+            contacts = ctm.getModel(uid, type, db);
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        db.closeConnection();
         return contacts;
     }
 
@@ -135,7 +138,6 @@ public class ContactsController implements Initializable, ControlledScreen {
 
     @FXML
     private void handleDelete() throws SQLException {
-        Database db = new Database("mssql");
         String delete_contacts = "DELETE FROM contacts where cid=?";
         PreparedStatement ps = db.getConnection().prepareStatement(delete_contacts);
         for(Contact c : contacts_table.getSelectionModel().getSelectedItems()) {
@@ -143,5 +145,11 @@ public class ContactsController implements Initializable, ControlledScreen {
             ps.executeUpdate();
             contacts_table.getItems().remove(c);
         }
+        ps.close();
+    }
+
+    @Override
+    public void setDatabase(Database db) {
+        this.db = db;
     }
 }
