@@ -74,6 +74,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("main_view.fxml"));
         mainStage.setTitle(String.format("%s %s's Main Page", user.getFirst_name(), user.getLast_name()));
         mainStage.setScene(new Scene((AnchorPane) loader.load()));
+        mainStage.getScene().getStylesheets().add("Main/main.css");
         MainViewController mvc = loader.<MainViewController>getController();
         mvc.setUser(user);
         mvc.setDatabase(db);

@@ -42,6 +42,8 @@ public class ControlLogin implements Initializable {
         user = new User();
         validated_user = Boolean.FALSE;
         email.setText(login.getEmailFromPrefs());
+        //TODO Remove before release
+        password.setText("iww1999");
     }
 
     public TextField getEmail() {

@@ -61,13 +61,13 @@ public class AddContactsController implements ControlledScreen {
         tf_num_contacts.setText("1");
         try {
             TextFields.bindAutoCompletion(
-                    tf_contact_name, (Collection) Lookups.contacts_auto_fill_text("contact_person", user.getUid(), db)
+                    tf_contact_name, (Collection) Lookups.auto_fill_text("contacts", "contact_person", user.getUid(), db)
             );
             TextFields.bindAutoCompletion(
-                    tf_agency, (Collection) Lookups.contacts_auto_fill_text("contact_agency", user.getUid(), db)
+                    tf_agency, (Collection) Lookups.auto_fill_text("contacts", "contact_agency", user.getUid(), db)
             );
             TextFields.bindAutoCompletion(
-                    tf_office, (Collection) Lookups.contacts_auto_fill_text("contact_agency_office", user.getUid(), db)
+                    tf_office, (Collection) Lookups.auto_fill_text("contacts", "contact_agency_office", user.getUid(), db)
             );
 
         } catch (SQLException e) {
@@ -85,13 +85,13 @@ public class AddContactsController implements ControlledScreen {
         combob_contact_class.setItems(Lookups.contact_class);
         try {
             TextFields.bindAutoCompletion(
-                    tf_contact_name, (Collection) Lookups.contacts_auto_fill_text("contact_person", user.getUid(), db)
+                    tf_contact_name, (Collection) Lookups.auto_fill_text("contacts", "contact_person", user.getUid(), db)
             );
             TextFields.bindAutoCompletion(
-                    tf_agency, (Collection) Lookups.contacts_auto_fill_text("contact_agency", user.getUid(), db)
+                    tf_agency, (Collection) Lookups.auto_fill_text("contacts", "contact_agency", user.getUid(), db)
             );
             TextFields.bindAutoCompletion(
-                    tf_office, (Collection) Lookups.contacts_auto_fill_text("contact_agency_office", user.getUid(), db)
+                    tf_office, (Collection) Lookups.auto_fill_text("contacts", "contact_agency_office", user.getUid(), db)
             );
 
         } catch (SQLException e) {

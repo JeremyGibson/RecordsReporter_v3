@@ -37,6 +37,7 @@ public class Lookups {
             "Government", "Media", "Private"
     );
 
+
     public static final HashMap<String, Integer> slu_lookup;
     static {
         slu_lookup = new HashMap<>();
@@ -61,15 +62,15 @@ public class Lookups {
         contact_class_lookup.put("Private", 2);
     }
 
-    public static final ObservableList<String> contacts_auto_fill_text(String column_name, int uid, Database db) throws SQLException {
-        String sql = String.format("SELECT %s FROM contacts where uid=%d", column_name, uid);
+    public static final ObservableList<String> auto_fill_text(String table_name, String column_name, int uid, Database db) throws SQLException {
+        String sql = String.format("SELECT DISTINCT %s FROM %s where uid=%d", column_name, table_name, uid);
+        db.getConnection();
         CachedRowSet rs = db.read(sql);
         ObservableList<String> list = FXCollections.observableArrayList();
         while(rs.next()) {
-            String s = rs.getString(column_name);
-            if(!list.contains(s))
-                list.add(s);
+            list.add(rs.getString(column_name));
         }
+        db.closeConnection();
         return list;
     }
 

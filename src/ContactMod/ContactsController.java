@@ -73,7 +73,7 @@ public class ContactsController implements Initializable, ControlledScreen {
                 if(event.getButton().equals(MouseButton.PRIMARY)) {
                     if(event.getClickCount() == 2) {
                         try {
-                            editContact(contacts_table.getSelectionModel().getSelectedItem().getCid());
+                            editContact();
                         } catch (IOException e) {
                             e.printStackTrace();
                         } catch (SQLException e) {
@@ -113,7 +113,7 @@ public class ContactsController implements Initializable, ControlledScreen {
         dialogStage.show();
     }
 
-    private void editContact(int cid) throws IOException, SQLException {
+    private void editContact() throws IOException, SQLException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("add_contact.fxml"));
         Stage dialogStage = new Stage(StageStyle.DECORATED);
         dialogStage.setTitle("Edit Contact");

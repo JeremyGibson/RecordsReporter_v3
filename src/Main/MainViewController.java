@@ -54,9 +54,6 @@ public class MainViewController implements Initializable {
         svs.registerUser(user);
         svs.registerDatabase(db);
         svs.loadScreen(CONTACTS, "../ContactMod/contacts.fxml");
-        svs.loadScreen(MINUTES, "../MinutesMod/minutes.fxml");
-        //svs.loadScreen(SCHEDULES, "../scheduleMod/schedule_table.fxml");
-        //svs.loadScreen(WORKSHOPS, "../workshopMod/workshop_table.fxml");
         switch_active_pane(CONTACTS);
     }
 
@@ -86,11 +83,18 @@ public class MainViewController implements Initializable {
 
     @FXML
     private void handle_mi_workshops() {
+        //svs.loadScreen(WORKSHOPS, "../workshopMod/workshop_table.fxml");
         switch_active_pane(WORKSHOPS);
     }
 
     @FXML private void handle_mi_minutes() {
+        svs.loadScreen(MINUTES, "../MinutesMod/minutes.fxml");
         switch_active_pane(MINUTES);
+    }
+
+    @FXML private void handle_mi_schedules() {
+        //svs.loadScreen(SCHEDULES, "../scheduleMod/schedule_table.fxml");
+        switch_active_pane(SCHEDULES);
     }
 
     @FXML private void handle_admin_login() {

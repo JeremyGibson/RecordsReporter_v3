@@ -56,7 +56,7 @@ public class Database implements CRUD {
         //Default to sqlite
         database_name = name;
         database_path = path;
-        connection_string = String.format("jdbc:sqlite:%s%s;",
+        connection_string = String.format("jdbc:sqlite:%s%s",
                 this.database_path,
                 this.database_name);
         createConnection(SQLITE);

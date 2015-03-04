@@ -11,11 +11,11 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TableColumn?>
 
-<AnchorPane fx:id="minutes_app" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MinutesMod.MinutesController">
+<AnchorPane fx:id="minutes_app" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ScheduleMod.ScheduleController">
     <children>
         <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
             <children>
-                <Button fx:id="add_entity" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleAdd" prefHeight="25.0" prefWidth="95.0" text="Add Minutes">
+                <Button fx:id="add_entity" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleAdd" prefHeight="25.0" prefWidth="95.0" text="Add Schedule">
                     <font>
                         <Font name="System Bold" size="10.0" />
                     </font>
@@ -36,13 +36,12 @@
                     <children>
                         <TableView fx:id="minutes_table" editable="true" prefHeight="580.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <columns>
-                                <TableColumn fx:id="mid_col" editable="false" prefWidth="75.0" text="MID" />
-                                <TableColumn fx:id="date_added_col" prefWidth="104.0" text="Date" />
-                                <TableColumn fx:id="sender_col" minWidth="9.0" prefWidth="85.0" text="Sender" />
-                                <TableColumn fx:id="sender_office_col" minWidth="0.0" prefWidth="109.0" text="Office" />
-                                <TableColumn fx:id="type_col" prefWidth="132.0" text="Minutes Type" />
-                                <TableColumn fx:id="num_pages_col" prefWidth="75.0" text="# Pages" />
-                                <TableColumn fx:id="tally_col" prefWidth="75.0" text="Tally" />
+                        <TableColumn fx:id="effective_date_col" prefWidth="97.0" text="Date Added" />
+                                <TableColumn fx:id="date_added_col" prefWidth="104.0" text="Effective Date" />
+                                <TableColumn fx:id="job_type_col" minWidth="9.0" prefWidth="64.0" text="Type" />
+                                <TableColumn fx:id="job_num_col" prefWidth="94.0" text="Job Num" />
+                                <TableColumn fx:id="agency_col" minWidth="0.0" prefWidth="344.0" text="Agency" />
+                                <TableColumn fx:id="num_items_col" minWidth="0.0" prefWidth="76.0" text="Items" />
                             </columns>
                         </TableView>
                     </children>

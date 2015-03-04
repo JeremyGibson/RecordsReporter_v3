@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -12,15 +13,17 @@
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
                       <MenuItem fx:id="mi_contacts" mnemonicParsing="false" onAction="#handle_mi_contacts" text="Contacts" />
                       <MenuItem fx:id="mi_minutes" mnemonicParsing="false" onAction="#handle_mi_minutes" text="Minutes" />
+                        <MenuItem fx:id="mi_schedules" mnemonicParsing="false" onAction="#handle_mi_schedules" text="Schedules" />
+                        <MenuItem fx:id="mi_workshops" mnemonicParsing="false" onAction="#handle_mi_workshops" text="Workshops" />
+                    <MenuItem mnemonicParsing="false" text="Close" />
 
                   </items>
                 </Menu>
                   <Menu mnemonicParsing="false" text="Preferences">
                     <items>
-                      <MenuItem fx:id="mi_pref_login" mnemonicParsing="false" onAction="#handle_admin_login" text="Login" />
+                      <MenuItem fx:id="mi_pref_login" mnemonicParsing="false" onAction="#handle_admin_login" text="Change User Data" />
                     </items>
                   </Menu>
               </menus>

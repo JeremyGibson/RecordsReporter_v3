@@ -1,0 +1,12 @@
+.menu-item {
+    -fx-font-weight: bolder;
+    -fx-padding: .5em;
+}
+
+.menu-bar {
+    -fx-font-weight: bolder;
+}
+
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+}

@@ -100,6 +100,10 @@ public class EasyDate {
         return this.util_date.getTime();
     }
 
+    public LocalDate getDateAsLocalDate() {
+        return sql_date.toLocalDate();
+    }
+
     public void setDates(String date) throws ParseException {
         this.string_date = date;
         if(string_date.length() > 10) {

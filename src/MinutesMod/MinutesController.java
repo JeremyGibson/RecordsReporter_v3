@@ -1,19 +1,28 @@
 package MinutesMod;
 
+import ContactMod.AddContactsController;
 import LoginMod.classes.User;
+import Models.Contact;
 import Models.Minute;
 import TableModels.MinutesTableModel;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import libs.ControlledScreen;
 import libs.Database;
 import libs.ScreenViewSwitcher;
 
+import java.io.IOException;
 import java.net.URL;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -35,21 +44,36 @@ public class MinutesController implements Initializable, ControlledScreen {
     @FXML private TableColumn<Minute, Number> num_pages_col = new TableColumn<>();
     @FXML private TableColumn<Minute, Number> tally_col = new TableColumn<>();
 
-    @FXML private Button add_contact;
-    @FXML private Button delete_contact;
+    @FXML private Button add_entity;
+    @FXML private Button delete_entity;
 
     @FXML private TableView<Minute> minutes_table = new TableView<Minute>();
 
-    @FXML private void handleAddMinute() {
-
+    @FXML private void handleAdd() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("add_minutes.fxml"));
+        Stage dialogStage = new Stage(StageStyle.DECORATED);
+        dialogStage.setTitle("Add Minutes");
+        dialogStage.setScene(new Scene((AnchorPane) loader.load()));
+        AddMinutesController amc = loader.<AddMinutesController>getController();
+        amc.setUser(user);
+        amc.registerTable(minutes_table);
+        amc.setParent(dialogStage);
+        amc.setDatabase(db);
+        amc.init();
+        dialogStage.show();
     }
 
-    @FXML private void handleDelete() {
-
+    @FXML private void handleDelete() throws SQLException {
+        String delete_contacts = "DELETE FROM minutes where mid=?";
+        PreparedStatement ps = db.getConnection().prepareStatement(delete_contacts);
+        for(Minute m : minutes_table.getSelectionModel().getSelectedItems()) {
+            ps.setInt(1, m.getMid());
+            ps.executeUpdate();
+            minutes_table.getItems().remove(m);
+        }
+        ps.close();
     }
     //</editor-fold>
-
-
 
     private ObservableList<Minute> getList(int uid, int type) {
         MinutesTableModel mtm = new MinutesTableModel();
@@ -63,8 +87,18 @@ public class MinutesController implements Initializable, ControlledScreen {
         return minutes;
     }
 
-    private void editMinute(int mid) {
-
+    private void editMinute() throws IOException, SQLException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("add_minutes.fxml"));
+        Stage dialogStage = new Stage(StageStyle.DECORATED);
+        dialogStage.setTitle("Edit Minute");
+        dialogStage.setScene(new Scene((AnchorPane) loader.load()));
+        AddMinutesController amc = loader.<AddMinutesController>getController();
+        amc.setUser(user);
+        amc.registerTable(minutes_table);
+        amc.setParent(dialogStage);
+        amc.setDatabase(db);
+        amc.init(minutes_table.getSelectionModel().getSelectedItem());
+        dialogStage.show();
     }
 
     //<editor-fold desc="Overrides">
@@ -104,7 +138,13 @@ public class MinutesController implements Initializable, ControlledScreen {
             @Override
             public void handle(MouseEvent event) {
                 if(event.getClickCount() == 2) {
-                    //Edit Minutes here
+                    try {
+                        editMinute();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
                 }
 
             }
