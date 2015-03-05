@@ -2,41 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/sqlite-jdbc-3.8.7.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MinutesMod/AddMinutesController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ScheduleMod/AddScheduleController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Models/Schedule.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ScheduleMod/ScheduleController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TableModels/SchedulesTableModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MinutesMod/add_minutes.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ScheduleMod/schedule.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/contactMod/AddContactsController.class" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/contactMod/AddContactsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/contactMod/ContactsController$1.class" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/contactMod/ContactsController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/contactMod/ContactsController.class" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/contactMod/ContactsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/loginMod/ControlLogin.class" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/loginMod/ControlLogin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/libs/Database.class" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/libs/Database.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/libs/EasyDate.class" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/libs/EasyDate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Models/Workshop.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TableModels/WorkshopsTableModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ScheduleMod/add_schedule.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/WorkshopsMod/workshop.fxml" />
+      <change type="DELETED" beforePath="H:\Development\Intellij\RecordsReporter_v3\src\WorkshopsMod\workshop_table.fxml" afterPath="" />
+      <change type="DELETED" beforePath="H:\Development\Intellij\RecordsReporter_v3\src\main_view.fxml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/libs/Lookups.class" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/libs/Lookups.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/Main/Main.class" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/Main/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/Main/MainViewController.class" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/Main/MainViewController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/MinutesMod/MinutesController$1.class" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/MinutesMod/MinutesController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/MinutesMod/MinutesController.class" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/MinutesMod/MinutesController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rrv3.db3" afterPath="$PROJECT_DIR$/rrv3.db3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactMod/AddContactsController.java" afterPath="$PROJECT_DIR$/src/ContactMod/AddContactsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ContactMod/ContactsController.java" afterPath="$PROJECT_DIR$/src/ContactMod/ContactsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LoginMod/ControlLogin.java" afterPath="$PROJECT_DIR$/src/LoginMod/ControlLogin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Database.java" afterPath="$PROJECT_DIR$/src/libs/Database.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/EasyDate.java" afterPath="$PROJECT_DIR$/src/libs/EasyDate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ScheduleMod/AddScheduleController.java" afterPath="$PROJECT_DIR$/src/ScheduleMod/AddScheduleController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/libs/Lookups.java" afterPath="$PROJECT_DIR$/src/libs/Lookups.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Main.java" afterPath="$PROJECT_DIR$/src/Main/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/MainViewController.java" afterPath="$PROJECT_DIR$/src/Main/MainViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MinutesMod/MinutesController.java" afterPath="$PROJECT_DIR$/src/MinutesMod/MinutesController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/Main/main_view.fxml" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/Main/main_view.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/main_view.fxml" afterPath="$PROJECT_DIR$/src/Main/main_view.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/RecordsReporter_v3/MinutesMod/minutes.fxml" afterPath="$PROJECT_DIR$/out/production/RecordsReporter_v3/MinutesMod/minutes.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MinutesMod/minutes.fxml" afterPath="$PROJECT_DIR$/src/MinutesMod/minutes.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Models/Schedule.java" afterPath="$PROJECT_DIR$/src/Models/Schedule.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ScheduleMod/ScheduleController.java" afterPath="$PROJECT_DIR$/src/ScheduleMod/ScheduleController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TableModels/SchedulesTableModel.java" afterPath="$PROJECT_DIR$/src/TableModels/SchedulesTableModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ScheduleMod/schedule.fxml" afterPath="$PROJECT_DIR$/src/ScheduleMod/schedule.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="H:\Development\Intellij\RecordsReporter_v3\src\WorkshopsMod\WorkshopsTableController.java" afterPath="$PROJECT_DIR$/src/WorkshopsMod/WorkshopController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,20 +88,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ScheduleController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ScheduleMod/ScheduleController.java">
+      <file leaf-file-name="MainViewController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/MainViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5743243" vertical-offset="612" max-vertical-offset="1496">
-              <caret line="94" column="40" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1309">
+              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+              <folding>
+                <element signature="n#!!doc;n#handle_mi_contacts#0;n#MainViewController#0" expanded="false" />
+                <element signature="e#2342#2343#0" expanded="true" />
+                <element signature="e#2386#2387#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkshopController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/WorkshopsMod/WorkshopController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1054">
+              <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="n#!!doc;n#effective_date_col#0;n#ScheduleController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScheduleController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ScheduleMod/ScheduleController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2567">
+              <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#1720#1730#0" expanded="true" />
-                <element signature="e#2099#2122#0" expanded="true" />
-                <element signature="e#3567#3590#0" expanded="true" />
-                <element signature="method#init#0;class#ScheduleController#0" expanded="false" />
-                <marker date="1425502684636" expanded="true" signature="2424:2455" placeholder="DELETE FROM ..." />
-                <marker date="1425502684636" expanded="true" signature="2583:2610" placeholder="DELETE FROM ..." />
+                <element signature="e#2100#2123#0" expanded="true" />
+                <element signature="e#3569#3592#0" expanded="true" />
+                <marker date="1425567891436" expanded="true" signature="2425:2458" placeholder="DELETE FROM ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workshop.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/WorkshopsMod/workshop.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1020">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorkshopsTableModel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TableModels/WorkshopsTableModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.65384614" vertical-offset="561" max-vertical-offset="1496">
+              <caret line="67" column="3" selection-start-line="67" selection-start-column="3" selection-end-line="67" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1425576614654" expanded="true" signature="492:679" placeholder="Select users..users..." />
+                <marker date="1425576614654" expanded="true" signature="735:902" placeholder="Select users..users..." />
+                <marker date="1425576614654" expanded="true" signature="952:1141" placeholder="SELECT users..users..." />
               </folding>
             </state>
           </provider>
@@ -127,124 +161,22 @@
       <file leaf-file-name="Lookups.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/libs/Lookups.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1649">
+              <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ContactMod/ContactsController.java">
+      <file leaf-file-name="Workshop.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Models/Workshop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="2210">
-              <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddScheduleController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ScheduleMod/AddScheduleController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1037">
+              <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#763#764#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
-                <element signature="e#864#865#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddMinutesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MinutesMod/AddMinutesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2754">
-              <caret line="27" column="61" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="61" />
-              <folding>
-                <element signature="method#init#1;class#AddMinutesController#0" expanded="false" />
-                <element signature="e#4097#4131#0" expanded="false" />
-                <element signature="e#5426#5461#0" expanded="false" />
-                <marker date="1425482939245" expanded="true" signature="3160:3193" placeholder="SELECT * FRO..minutes..." />
-                <marker date="1425482939245" expanded="true" signature="4200:4272" placeholder="INSERT INTO ..." />
-                <marker date="1425482939245" expanded="true" signature="6100:6489" placeholder="UPDATE minut..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SchedulesTableModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TableModels/SchedulesTableModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
-              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1425500457048" expanded="true" signature="490:675" placeholder="Select users..users..." />
-                <marker date="1425500457048" expanded="true" signature="731:898" placeholder="Select users..users..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MinutesTableModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TableModels/MinutesTableModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1088">
-              <caret line="64" column="5" selection-start-line="16" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
-              <folding>
-                <marker date="1425410099758" expanded="true" signature="482:659" placeholder="Select users..users..." />
-                <marker date="1425410099758" expanded="true" signature="713:872" placeholder="Select users..users..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Schedule.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Models/Schedule.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="852" max-vertical-offset="2295">
-              <caret line="103" column="71" selection-start-line="103" selection-start-column="71" selection-end-line="103" selection-end-column="71" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1899#1900#0" expanded="true" />
-                <element signature="e#1925#1926#0" expanded="true" />
-                <element signature="e#2833#2834#0" expanded="true" />
-                <element signature="e#2912#2913#0" expanded="true" />
-                <element signature="e#3827#3828#0" expanded="true" />
-                <element signature="e#3860#3861#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schedule.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ScheduleMod/schedule.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1037">
-              <caret line="13" column="206" selection-start-line="13" selection-start-column="206" selection-end-line="13" selection-end-column="206" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MinutesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MinutesMod/MinutesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="1173">
-              <caret line="155" column="1" selection-start-line="32" selection-start-column="31" selection-end-line="155" selection-end-column="1" />
-              <folding>
-                <element signature="method#handleDelete#0;class#MinutesController#0" expanded="false" />
-                <element signature="method#getList#0;class#MinutesController#0" expanded="false" />
-                <element signature="n#!!doc;n#setScreenParent#0;n#MinutesController#0" expanded="false" />
-                <marker date="1425480886831" expanded="true" signature="2431:2462" placeholder="DELETE FROM ..." />
+                <element signature="n#!!doc;n#getWid#0;n#Workshop#0" expanded="false" />
+                <element signature="n#!!doc;n#setWid#0;n#Workshop#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -271,12 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/TableModels/TableModelBuilder.java" />
-        <option value="$PROJECT_DIR$/src/loginMod/classes/Login.java" />
-        <option value="$PROJECT_DIR$/src/MainController.java" />
-        <option value="$PROJECT_DIR$/src/ContactsTable/MainController.java" />
-        <option value="$PROJECT_DIR$/src/ContactsTable/contacts_table.fxml" />
-        <option value="$PROJECT_DIR$/src/ContactsTable/CellEdit.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/ContactsTable/ContactsTableController.java" />
         <option value="$PROJECT_DIR$/src/ScreenViewSwitcher.java" />
@@ -315,13 +241,19 @@
         <option value="$PROJECT_DIR$/src/Main/Main.java" />
         <option value="$PROJECT_DIR$/src/LoginMod/ControlLogin.java" />
         <option value="$PROJECT_DIR$/src/Main/main.css" />
-        <option value="$PROJECT_DIR$/src/Main/MainViewController.java" />
-        <option value="$PROJECT_DIR$/src/ScheduleMod/schedule.fxml" />
+        <option value="$PROJECT_DIR$/src/db_export/exportSchedules.java" />
         <option value="$PROJECT_DIR$/src/TableModels/SchedulesTableModel.java" />
-        <option value="$PROJECT_DIR$/src/libs/Lookups.java" />
-        <option value="$PROJECT_DIR$/src/Models/Schedule.java" />
         <option value="$PROJECT_DIR$/src/ScheduleMod/ScheduleController.java" />
         <option value="$PROJECT_DIR$/src/ScheduleMod/AddScheduleController.java" />
+        <option value="$PROJECT_DIR$/src/ScheduleMod/add_schedule.fxml" />
+        <option value="$PROJECT_DIR$/src/ScheduleMod/schedule.fxml" />
+        <option value="$PROJECT_DIR$/src/Models/Schedule.java" />
+        <option value="$PROJECT_DIR$/src/Models/Workshops.java" />
+        <option value="$PROJECT_DIR$/src/Main/MainViewController.java" />
+        <option value="$PROJECT_DIR$/src/Models/Workshop.java" />
+        <option value="$PROJECT_DIR$/src/libs/Lookups.java" />
+        <option value="$PROJECT_DIR$/src/WorkshopsMod/WorkshopController.java" />
+        <option value="$PROJECT_DIR$/src/TableModels/WorkshopsTableModel.java" />
       </list>
     </option>
   </component>
@@ -363,6 +295,7 @@
       <sortByType ProjectPane="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -394,6 +327,10 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WorkshopsMod" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -406,10 +343,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TableModels" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -445,7 +378,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MinutesMod" />
+              <option name="myItemId" value="Models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordsReporter_v3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecordsReporter_v3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -484,7 +435,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -508,6 +458,9 @@
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="FullScreen" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="options.lastSelected" value="preferences.lookFeel" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -516,11 +469,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Development\Intellij\RecordsReporter_v3\src\WorkshopsMod" />
       <recent name="H:\Development\Intellij\RecordsReporter_v3\src\ScheduleMod" />
       <recent name="H:\Development\Intellij\RecordsReporter_v3\src\MinutesMod" />
       <recent name="H:\Development\Intellij\RecordsReporter_v3\lib" />
       <recent name="H:\Development\Intellij\RecordsReporter_v3\src\libs" />
-      <recent name="H:\Development\Intellij\RecordsReporter_v3\src\TableModels" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\Development\Intellij\RecordsReporter_v3\src\contactMod" />
@@ -529,6 +482,7 @@
       <recent name="H:\Development\Intellij\RecordsReporter_v3\src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="TableModels" />
       <recent name="db_export" />
       <recent name="libs" />
     </key>
@@ -560,6 +514,32 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="exportSchedules" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="db_export.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="db_export.exportSchedules" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RecordsReporter_v3" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -1002,14 +982,16 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.exportContacts" />
       <item index="1" class="java.lang.String" itemvalue="Application.Main" />
       <item index="2" class="java.lang.String" itemvalue="Application.exportMinutes" />
+      <item index="3" class="java.lang.String" itemvalue="Application.exportSchedules" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.exportMinutes" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.exportSchedules" />
+        <item index="1" class="java.lang.String" itemvalue="Application.exportMinutes" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1063,7 +1045,9 @@
       <workItem from="1425404149702" duration="24685000" />
       <workItem from="1425485495544" duration="8581000" />
       <workItem from="1425497148697" duration="2125000" />
-      <workItem from="1425499733238" duration="3051000" />
+      <workItem from="1425499733238" duration="8753000" />
+      <workItem from="1425561185497" duration="9020000" />
+      <workItem from="1425571091904" duration="4495000" />
     </task>
     <task id="LOCAL-00001" summary="Various changes to revert to SQLlite datastore. Moved to shared databases">
       <created>1425417942371</created>
@@ -1071,11 +1055,17 @@
       <option name="project" value="LOCAL" />
       <updated>1425417942371</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Minutes Module completed.  Began work on Schedules">
+      <created>1425502821669</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1425502821669</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207969000" />
+    <option name="totallyTimeSpent" value="227186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1272" y="-8" width="1296" height="1040" extended-state="6" />
@@ -1084,7 +1074,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3299435" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1107,6 +1096,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34011298" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299435" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -1185,7 +1175,7 @@
           <option name="timeStamp" value="498" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="508" />
+      <option name="time" value="529" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1194,70 +1184,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ContactMod/add_contact.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16132858" vertical-offset="0" max-vertical-offset="2091">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/javafx-src.zip!/javafx/collections/MapChangeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="384" max-vertical-offset="1598">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="38587" max-vertical-offset="57307">
-          <caret line="2436" column="0" selection-start-line="2436" selection-start-column="0" selection-end-line="2436" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/javafx-src.zip!/javafx/scene/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="8222" max-vertical-offset="144602">
-          <caret line="664" column="16" selection-start-line="664" selection-start-column="16" selection-end-line="664" selection-end-column="16" />
-          <folding>
-            <element signature="e#29236#29237#0" expanded="false" />
-            <element signature="e#29293#29294#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/main_view.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.031365313" vertical-offset="0" max-vertical-offset="731">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MinutesMod/minutes.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1003">
-          <caret line="42" column="91" selection-start-line="42" selection-start-column="91" selection-end-line="42" selection-end-column="91" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/libs/UserList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="850">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Models/Contact.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="1105">
@@ -1334,13 +1260,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WorkshopsMod/WorkshopsTableController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="731">
-          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LoginMod/ControlNewUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="258" max-vertical-offset="1360">
@@ -1356,14 +1275,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ContactMod/contacts.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-27.678572" vertical-offset="58" max-vertical-offset="969">
           <caret line="49" column="14" selection-start-line="9" selection-start-column="3" selection-end-line="49" selection-end-column="14" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/sqlite-jdbc-3.8.7.jar!/org/sqlite/jdbc3/JDBC3Connection.java">
@@ -1416,13 +1334,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminDialogs/update_login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18819188" vertical-offset="0" max-vertical-offset="542">
           <caret line="6" column="202" selection-start-line="6" selection-start-column="202" selection-end-line="6" selection-end-column="202" />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db_export/exportContacts.java">
@@ -1432,22 +1350,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/db_export/exportMinutes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7447917" vertical-offset="166" max-vertical-offset="1037">
-          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MinutesMod/add_minutes.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2091">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/libs/EasyDate.java">
@@ -1468,24 +1378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ContactMod/AddContactsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2068" max-vertical-offset="3587">
-          <caret line="251" column="24" selection-start-line="236" selection-start-column="8" selection-end-line="251" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#init#0;class#AddContactsController#0" expanded="false" />
-            <element signature="method#addContact#0;class#AddContactsController#0" expanded="false" />
-            <element signature="e#7971#8023#0" expanded="false" />
-            <element signature="e#11422#11476#0" expanded="false" />
-            <element signature="method#createAA#0;class#AddContactsController#0" expanded="false" />
-            <element signature="method#reset#0;class#AddContactsController#0" expanded="false" />
-            <element signature="method#setScreenParent#0;class#AddContactsController#0" expanded="false" />
-            <element signature="method#handle_analyst_cxbx#0;class#AddContactsController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/libs/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="1663" max-vertical-offset="3111">
@@ -1498,7 +1390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="986">
           <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1506,20 +1397,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17495711" vertical-offset="0" max-vertical-offset="583">
           <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7924528" vertical-offset="490" max-vertical-offset="1513">
-          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/MainViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="998" max-vertical-offset="1615">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1531,127 +1408,242 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ScheduleMod/schedule.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1054">
-          <caret line="13" column="206" selection-start-line="13" selection-start-column="206" selection-end-line="13" selection-end-column="206" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MinutesMod/MinutesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="1173">
-          <caret line="155" column="1" selection-start-line="32" selection-start-column="31" selection-end-line="155" selection-end-column="1" />
-          <folding>
-            <element signature="method#handleDelete#0;class#MinutesController#0" expanded="false" />
-            <element signature="method#getList#0;class#MinutesController#0" expanded="false" />
-            <element signature="n#!!doc;n#setScreenParent#0;n#MinutesController#0" expanded="false" />
-            <marker date="1425480886831" expanded="true" signature="2431:2462" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TableModels/MinutesTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1088">
           <caret line="64" column="5" selection-start-line="16" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
-          <folding>
-            <marker date="1425410099758" expanded="true" signature="482:659" placeholder="Select users..users..." />
-            <marker date="1425410099758" expanded="true" signature="713:872" placeholder="Select users..users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TableModels/SchedulesTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1425500457048" expanded="true" signature="490:675" placeholder="Select users..users..." />
-            <marker date="1425500457048" expanded="true" signature="731:898" placeholder="Select users..users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/libs/Lookups.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db_export/exportSchedules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1071">
+          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/javafx-src.zip!/javafx/scene/control/TableView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30350876" vertical-offset="10928" max-vertical-offset="50014">
+          <caret line="726" column="0" selection-start-line="726" selection-start-column="0" selection-end-line="726" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/db_export/exportMinutes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0438596" vertical-offset="0" max-vertical-offset="1037">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ContactMod/ContactsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="421" max-vertical-offset="2210">
-          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.058553386" vertical-offset="357" max-vertical-offset="2210">
+          <caret line="49" column="67" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
+          <folding>
+            <element signature="e#1710#1719#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Models/Schedule.java">
+    <entry file="file://$PROJECT_DIR$/src/ContactMod/AddContactsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="801" max-vertical-offset="2295">
-          <caret line="103" column="71" selection-start-line="103" selection-start-column="71" selection-end-line="103" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.9391504" vertical-offset="644" max-vertical-offset="3111">
+          <caret line="250" column="30" selection-start-line="250" selection-start-column="30" selection-end-line="250" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1899#1900#0" expanded="true" />
-            <element signature="e#1925#1926#0" expanded="true" />
-            <element signature="e#2833#2834#0" expanded="true" />
-            <element signature="e#2912#2913#0" expanded="true" />
-            <element signature="e#3827#3828#0" expanded="true" />
-            <element signature="e#3860#3861#0" expanded="true" />
+            <element signature="method#init#0;class#AddContactsController#0" expanded="false" />
+            <element signature="method#init#1;class#AddContactsController#0" expanded="false" />
+            <element signature="method#getContactToEdit#0;class#AddContactsController#0" expanded="false" />
+            <element signature="method#addContact#0;class#AddContactsController#0" expanded="false" />
+            <element signature="e#7971#8023#0" expanded="false" />
+            <element signature="method#createAA#0;class#AddContactsController#0" expanded="false" />
+            <element signature="method#reset#0;class#AddContactsController#0" expanded="false" />
+            <element signature="method#setScreenParent#0;class#AddContactsController#0" expanded="false" />
+            <element signature="method#handle_analyst_cxbx#0;class#AddContactsController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MinutesMod/AddMinutesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2754">
-          <caret line="27" column="61" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="968" max-vertical-offset="2669">
+          <caret line="128" column="49" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ScheduleMod/add_schedule.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.409594" vertical-offset="1" max-vertical-offset="1751">
+          <caret line="57" column="31" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
           <folding>
-            <element signature="method#init#1;class#AddMinutesController#0" expanded="false" />
-            <element signature="e#4097#4131#0" expanded="false" />
-            <element signature="e#5426#5461#0" expanded="false" />
-            <marker date="1425482939245" expanded="true" signature="3160:3193" placeholder="SELECT * FRO..minutes..." />
-            <marker date="1425482939245" expanded="true" signature="4200:4272" placeholder="INSERT INTO ..." />
-            <marker date="1425482939245" expanded="true" signature="6100:6489" placeholder="UPDATE minut..." />
+            <element signature="n#columnConstraints#0;n#GridPane#0;n#children#0;n#VBox#0;n#children#0;n#AnchorPane#0;n#!!top" expanded="false" />
+            <element signature="n#rowConstraints#0;n#GridPane#0;n#children#0;n#VBox#0;n#children#0;n#AnchorPane#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Schedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.1698112" vertical-offset="27" max-vertical-offset="1802">
+          <caret line="102" column="47" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getJobTypeAsString#0;class#Schedule#0" expanded="false" />
+            <element signature="e#3706#3736#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MinutesMod/MinutesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38765007" vertical-offset="522" max-vertical-offset="1173">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding>
+            <element signature="method#handleDelete#0;class#MinutesController#0" expanded="false" />
+            <element signature="method#getList#0;class#MinutesController#0" expanded="false" />
+            <element signature="n#!!doc;n#setScreenParent#0;n#MinutesController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ScheduleMod/schedule.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59594095" vertical-offset="357" max-vertical-offset="1037">
+          <caret line="40" column="108" selection-start-line="40" selection-start-column="108" selection-end-line="40" selection-end-column="108" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ScheduleMod/AddScheduleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4508772" vertical-offset="712" max-vertical-offset="1938">
+          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#763#764#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#864#865#0" expanded="true" />
+            <element signature="method#init#0;class#AddScheduleController#0" expanded="false" />
+            <element signature="method#addSchedule#0;class#AddScheduleController#0" expanded="false" />
+            <element signature="method#updateSchedule#0;class#AddScheduleController#0" expanded="false" />
+            <element signature="method#sanitize#0;class#AddScheduleController#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/main_view.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="843">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5803167" vertical-offset="490" max-vertical-offset="1513">
+          <caret line="73" column="57" selection-start-line="73" selection-start-column="57" selection-end-line="73" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/MainViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1309">
+          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc;n#handle_mi_contacts#0;n#MainViewController#0" expanded="false" />
+            <element signature="e#2342#2343#0" expanded="true" />
+            <element signature="e#2386#2387#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/libs/Lookups.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1649">
+          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TableModels/SchedulesTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15384616" vertical-offset="374" max-vertical-offset="1258">
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1425567648128" expanded="true" signature="-1:-1" placeholder="Select users..users..." />
+            <marker date="1425567648128" expanded="true" signature="-1:-1" placeholder="Select users..users..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorkshopsMod/workshop.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ScheduleMod/ScheduleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5743243" vertical-offset="612" max-vertical-offset="1496">
-          <caret line="94" column="40" selection-start-line="94" selection-start-column="40" selection-end-line="94" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2567">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="n#!!doc;n#effective_date_col#0;n#ScheduleController#0" expanded="false" />
             <element signature="e#1720#1730#0" expanded="true" />
-            <element signature="e#2099#2122#0" expanded="true" />
-            <element signature="e#3567#3590#0" expanded="true" />
-            <element signature="method#init#0;class#ScheduleController#0" expanded="false" />
-            <marker date="1425502684636" expanded="true" signature="2424:2455" placeholder="DELETE FROM ..." />
-            <marker date="1425502684636" expanded="true" signature="2583:2610" placeholder="DELETE FROM ..." />
+            <element signature="e#2100#2123#0" expanded="true" />
+            <element signature="e#3569#3592#0" expanded="true" />
+            <marker date="1425567891436" expanded="true" signature="2425:2458" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorkshopsMod/WorkshopController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1054">
+          <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Models/Workshop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1037">
+          <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#getWid#0;n#Workshop#0" expanded="false" />
+            <element signature="n#!!doc;n#setWid#0;n#Workshop#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TableModels/WorkshopsTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65384614" vertical-offset="561" max-vertical-offset="1496">
+          <caret line="67" column="3" selection-start-line="67" selection-start-column="3" selection-end-line="67" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1425576614654" expanded="true" signature="492:679" placeholder="Select users..users..." />
+            <marker date="1425576614654" expanded="true" signature="735:902" placeholder="Select users..users..." />
+            <marker date="1425576614654" expanded="true" signature="952:1141" placeholder="SELECT users..users..." />
           </folding>
         </state>
       </provider>

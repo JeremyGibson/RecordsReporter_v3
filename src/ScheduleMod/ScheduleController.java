@@ -51,7 +51,7 @@ public class ScheduleController implements ControlledScreen {
     @FXML private TableView<Schedule> schedules_table = new TableView<Schedule>();
 
     @FXML private void handleAdd() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("add_minutes.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("add_schedule.fxml"));
         Stage dialogStage = new Stage(StageStyle.DECORATED);
         dialogStage.setTitle("Add Schedules");
         dialogStage.setScene(new Scene((AnchorPane) loader.load()));
@@ -65,7 +65,7 @@ public class ScheduleController implements ControlledScreen {
     }
 
     @FXML private void handleDelete() throws SQLException {
-        String delete_contacts = "DELETE FROM minutes where mid=?";
+        String delete_contacts = "DELETE FROM schedules where sid=?";
         PreparedStatement ps = db.getConnection().prepareStatement(delete_contacts);
         for(Schedule s : schedules_table.getSelectionModel().getSelectedItems()) {
             ps.setInt(1, s.getSid());
@@ -89,7 +89,7 @@ public class ScheduleController implements ControlledScreen {
     }
 
     private void editSchedule() throws IOException, SQLException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("add_schedules.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("add_schedule.fxml"));
         Stage dialogStage = new Stage(StageStyle.DECORATED);
         dialogStage.setTitle("Edit Schedule");
         dialogStage.setScene(new Scene((AnchorPane) loader.load()));
@@ -120,14 +120,14 @@ public class ScheduleController implements ControlledScreen {
 
     @Override
     public void init() {
-        effective_date_col.setCellValueFactory(ud -> ud.getValue().effective_dateProperty());
         date_added_col.setCellValueFactory(ud->ud.getValue().date_addedProperty());
+        effective_date_col.setCellValueFactory(ud -> ud.getValue().effective_dateProperty());
         job_type_col.setCellValueFactory(ud-> ud.getValue().getJobTypeAsString());
         job_num_col.setCellValueFactory(ud->ud.getValue().job_numberProperty());
         agency_col.setCellValueFactory(ud->ud.getValue().agencyProperty());
         num_items_col.setCellValueFactory(ud->ud.getValue().num_itemsProperty());
 
-        final ObservableList<Schedule> data = getList(user.getUid(), SchedulesTableModel.ALL_SCHEDULES);
+        final ObservableList<Schedule> data = getList(user.getUid(), SchedulesTableModel.USER_SCHEDULES);
         schedules_table.setItems(data);
         schedules_table.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override

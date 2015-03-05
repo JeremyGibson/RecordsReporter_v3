@@ -17,7 +17,7 @@ public class SchedulesTableModel {
     private ObservableList<Schedule> schedules_list = FXCollections.observableArrayList();
     private static final String GET_USER_SCHEDULES = "Select users.f_name, users.l_name, schedules.* " +
             "from users, schedules where schedules.uid=users.uid " +
-            "AND minutes.uid=? ORDER BY schedules.date_added DESC";
+            "AND schedules.uid=? ORDER BY schedules.date_added DESC";
     private static final String GET_ALL_SCHEDULES = "Select users.f_name, users.l_name, schedules.* " +
             "from users, schedules where schedules.uid=users.uid " +
             "ORDER BY schedules.date_added DESC";
@@ -55,7 +55,7 @@ public class SchedulesTableModel {
                     rs.getDate("effective_date").toLocalDate(),
                     rs.getInt("schedule_type"),
                     rs.getString("agency"),
-                    rs.getInt("job_number"),
+                    rs.getString("job_number"),
                     rs.getInt("job_type"),
                     rs.getInt("num_items"),
                     rs.getString("description"),

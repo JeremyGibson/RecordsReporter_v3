@@ -101,7 +101,7 @@ public class Schedule {
     }
 
     public StringProperty getJobTypeAsString() {
-        return new SimpleStringProperty(Lookups.slu.get(getJob_type()));
+        return new SimpleStringProperty(Lookups.sched_job_type.get(getJob_type()));
     }
 
     public IntegerProperty job_typeProperty() {

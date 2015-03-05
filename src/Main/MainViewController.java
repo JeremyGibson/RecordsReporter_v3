@@ -76,6 +76,7 @@ public class MainViewController implements Initializable {
         switch_active_pane(pane);
     }
 
+    //<editor-fold desc="MainScreens Managed from the MVC">
     @FXML
     private void handle_mi_contacts() {
         switch_active_pane(CONTACTS);
@@ -83,7 +84,7 @@ public class MainViewController implements Initializable {
 
     @FXML
     private void handle_mi_workshops() {
-        //svs.loadScreen(WORKSHOPS, "../workshopMod/workshop_table.fxml");
+        svs.loadScreen(WORKSHOPS, "../WorkshopsMod/workshop.fxml");
         switch_active_pane(WORKSHOPS);
     }
 
@@ -93,13 +94,14 @@ public class MainViewController implements Initializable {
     }
 
     @FXML private void handle_mi_schedules() {
-        //svs.loadScreen(SCHEDULES, "../scheduleMod/schedule_table.fxml");
+        svs.loadScreen(SCHEDULES, "../ScheduleMod/schedule.fxml");
         switch_active_pane(SCHEDULES);
     }
 
     @FXML private void handle_admin_login() {
 
     }
+    //</editor-fold>
 
     public Stage getParentStage() {
         return ownerStage;

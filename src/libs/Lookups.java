@@ -37,6 +37,28 @@ public class Lookups {
             "Government", "Media", "Private"
     );
 
+    public static final ObservableList<String> sched_job_type = FXCollections.observableArrayList(
+            "New", "Update", "Name Change"
+    );
+
+    public static final ObservableList<String> workshop_type = FXCollections.observableArrayList(
+      "Government", "Private"
+    );
+
+    public static final HashMap<String, Integer> workshop_type_lookup;
+    static {
+        workshop_type_lookup = new HashMap<>();
+        workshop_type_lookup.put("Government", 0);
+        workshop_type_lookup.put("Private", 1);
+    }
+
+    public static final HashMap<String, Integer> job_type_lookup;
+    static {
+        job_type_lookup = new HashMap<>();
+        job_type_lookup.put("New", 0);
+        job_type_lookup.put("Update", 1);
+        job_type_lookup.put("Name Change", 2);
+    }
 
     public static final HashMap<String, Integer> slu_lookup;
     static {
