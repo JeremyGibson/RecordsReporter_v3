@@ -36,11 +36,11 @@
                     <children>
                         <TableView fx:id="workshops_table" editable="true" prefHeight="580.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <columns>
-                        <TableColumn fx:id="workshop_date" prefWidth="57.0" text="Date" />
-                        <TableColumn fx:id="staff" prefWidth="109.0" text="Staff" />
-                                <TableColumn fx:id="num_attending" minWidth="0.0" prefWidth="86.0" text="Attending" />
-                                <TableColumn fx:id="location" prefWidth="133.0" text="Workshop Location" />
-                        <TableColumn fx:id="description" prefWidth="394.0" text="Description" />
+                        <TableColumn fx:id="workshop_date" prefWidth="75.0" text="Date" />
+                        <TableColumn fx:id="staff" prefWidth="105.0" text="Staff" />
+                                <TableColumn fx:id="num_attending" minWidth="0.0" prefWidth="72.0" text="Attending" />
+                                <TableColumn fx:id="location" prefWidth="191.0" text="Workshop Location" />
+                        <TableColumn fx:id="description" prefWidth="336.0" text="Description" />
                             </columns>
                         </TableView>
                     </children>

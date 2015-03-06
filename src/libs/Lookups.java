@@ -42,7 +42,7 @@ public class Lookups {
     );
 
     public static final ObservableList<String> workshop_type = FXCollections.observableArrayList(
-      "Government", "Private"
+            "Government", "Private"
     );
 
     public static final HashMap<String, Integer> workshop_type_lookup;

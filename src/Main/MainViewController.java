@@ -110,6 +110,7 @@ public class MainViewController implements Initializable {
     public void setUser(User u) {
         user = u;
     }
+
     public void setDatabase(Database db) {
         this.db = db;
     }

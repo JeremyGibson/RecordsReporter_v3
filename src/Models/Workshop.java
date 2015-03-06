@@ -14,6 +14,7 @@ public class Workshop {
     private IntegerProperty uid;
     private ObjectProperty<LocalDate> workshop_date;
     private ObservableList<IntegerProperty> additional_uids;
+    private ObservableList<StringProperty> additional_names;
     private IntegerProperty auid;
     private StringProperty location;
     private IntegerProperty num_attending;
@@ -47,6 +48,22 @@ public class Workshop {
         for(Integer i : uids) {
             this.additional_uids.add(new SimpleIntegerProperty(i));
         }
+    }
+
+    public void setAdditionalAnalysts(ObservableList<String> names) {
+        this.additional_names = FXCollections.observableArrayList();
+        for(String s : names) {
+            additional_names.add(new SimpleStringProperty(s));
+        }
+    }
+
+    public StringProperty getAdditionalAnalysts() {
+        StringBuilder s = new StringBuilder();
+        if(additional_names == null) return new SimpleStringProperty("");
+        for(StringProperty str : additional_names) {
+            s.append(str.getValue() + "\n");
+        }
+        return new SimpleStringProperty(s.toString());
     }
 
     //<editor-fold desc="Getters">

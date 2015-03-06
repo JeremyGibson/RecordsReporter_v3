@@ -2,6 +2,10 @@ package TableModels;
 
 import Models.Schedule;
 import Models.Workshop;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import libs.Database;
@@ -22,7 +26,7 @@ public class WorkshopsTableModel {
             "from users, workshops where workshops.uid=users.uid " +
             "ORDER BY workshops.date_added DESC";
 
-    private static final String GET_X_UIDS = "SELECT users.fname, workshop_uids.uid " +
+    private static final String GET_X_UIDS = "SELECT users.f_name, workshop_uids.uid " +
             "FROM users, workshop_uids " +
             "WHERE " +
             "workshop_uids.uid=users.uid AND " +
@@ -56,7 +60,7 @@ public class WorkshopsTableModel {
         }
 
         while (rs.next()) {
-            workshops_list.add(new Workshop(
+            Workshop wkshp = new Workshop(
                     rs.getInt("wid"),
                     rs.getInt("uid"),
                     rs.getDate("workshop_date").toLocalDate(),
@@ -67,16 +71,24 @@ public class WorkshopsTableModel {
                     rs.getString("description"),
                     rs.getDate("date_added").toLocalDate(),
                     rs.getDate("date_modified").toLocalDate()
-
-            ));
+            );
 
             if(rs.getInt("additional_uids") == 1) {
                 gxuid = db.getConnection().prepareStatement(GET_X_UIDS);
                 gxuid.setInt(1, rs.getInt("wid"));
                 ResultSet resultSet = gxuid.executeQuery();
                 ObservableList<Integer> uids = FXCollections.observableArrayList();
+                ObservableList<String> uid_names = FXCollections.observableArrayList();
+                while(resultSet.next()) {
+                    uids.add(resultSet.getInt("uid"));
+                    uid_names.add(resultSet.getString("f_name"));
+                }
+                wkshp.setAdditionalUids(uids);
+                wkshp.setAdditionalAnalysts(uid_names);
             }
+            workshops_list.add(wkshp);
         }
+
         return workshops_list;
     }
 }
